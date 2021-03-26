@@ -17,7 +17,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     SQLiteDatabase DB;
-    Button buttonId;
+    Button buttonId; //TODO: объявление переменных с одинаковым типом можно вписать в одну строчку
     Button buttonEnter;
     Button buttonName;
     Button buttonProducer;
@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         LV.setAdapter(adapter);
         registerForContextMenu(LV);
         editMode = false;
+         //TODO: можно не обращаться каждый раз к БД за количеством записей. Завести глобальную переменную, увеличивать ее при добавлении записи
         //getCount(); //TODO: убрать комментарий или оставить эту функциональность и выводить общее количество при запуске
         buttonEnter.setOnClickListener(new View.OnClickListener() {//TODO: на кнопку и так можно повешать функцию onClick и без слушателя, это немного сократит код. То же касается и остальных кнопок
             @Override
@@ -83,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("D", cursor.getInt(0) + "");
                     DB.execSQL("UPDATE Engines SET Name = '" + newEntryNameField.getText().toString() + "' , Producer = '"
                             + newEntryProducerField.getText().toString() + "', Thrust =" + newEntryThrustField.getText().toString()
-                            + " WHERE _id = " + cursor.getInt(0));
+                            + " WHERE _id = " + cursor.getInt(0)); //TODO: Thrust не обнесен кавычками. Может вылететь ошибка, если пользователь оставит поле пустым
                     editMode = false;
                     cursor = DB.rawQuery("SELECT * FROM Engines", null);
                     adapter.notifyDataSetChanged();
