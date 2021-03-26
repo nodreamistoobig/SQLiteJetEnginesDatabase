@@ -20,7 +20,7 @@
         android:id="@+id/insertTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Insert or edit item"
+        android:text="@string/instructions"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,11 +43,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Enter"
+        android:text="@string/enter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newEntryThrust" />
+        app:layout_constraintTop_toBottomOf="@+id/newEntryThrust"
+        android:onClick="onEnter"/>
 
     <EditText
         android:id="@+id/newEntryProducer"
@@ -65,7 +66,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
+        android:text="@string/name"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toTopOf="@+id/newEntryName"
         app:layout_constraintStart_toStartOf="parent" />
@@ -74,7 +75,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Producer"
+        android:text="@string/producer"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toTopOf="@+id/newEntryProducer"
         app:layout_constraintStart_toStartOf="parent" />
@@ -83,7 +84,6 @@
         android:id="@+id/numberOfItems"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total number of items: "
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,37 +94,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Producer"
+        android:text="@string/producer"
         app:layout_constraintEnd_toStartOf="@+id/buttonThrust"
         app:layout_constraintStart_toEndOf="@+id/buttonName"
-        app:layout_constraintTop_toBottomOf="@+id/numberOfItems" />
+        app:layout_constraintTop_toBottomOf="@+id/numberOfItems"
+        android:onClick="onClick"/>
 
     <Button
         android:id="@+id/buttonId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Id"
+        android:text="@string/id"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numberOfItems" />
+        app:layout_constraintTop_toBottomOf="@+id/numberOfItems"
+        android:onClick="onClick"/>
 
     <Button
         android:id="@+id/buttonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Name"
+        android:text="@string/name"
         app:layout_constraintStart_toEndOf="@+id/buttonId"
-        app:layout_constraintTop_toBottomOf="@+id/numberOfItems" />
+        app:layout_constraintTop_toBottomOf="@+id/numberOfItems"
+        android:onClick="onClick"/>
 
     <Button
         android:id="@+id/buttonThrust"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Thrust (KN)"
+        android:text="@string/thrust_kn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numberOfItems" />
+        app:layout_constraintTop_toBottomOf="@+id/numberOfItems"
+        android:onClick="onClick"/>
 
     <EditText
         android:id="@+id/newEntryThrust"
@@ -140,7 +144,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thrust (KN)"
+        android:text="@string/thrust_kn"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toTopOf="@+id/newEntryThrust"
         app:layout_constraintStart_toStartOf="parent" />

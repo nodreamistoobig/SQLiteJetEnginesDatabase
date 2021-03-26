@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SQLApp</string>
+    <string name="instructions">Insert or edit item</string>
+    <string name="enter">Enter</string>
+    <string name="name">Name</string>
+    <string name="producer">Producer</string>
+    <string name="id">Id</string>
+    <string name="thrust_kn">Thrust (KN)</string>
+    <string name="number_of_items">Number of items: </string>
 </resources>
